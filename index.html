@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Cancer Victory Garden — San Luis Obispo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:Montserrat,sans-serif;color:#24302c;background:#faf8f4;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#1b597c}a:hover{color:#d9558f}
+img{display:block;max-width:100%}
+</style>
+</helmet>
+<div style="min-height:100vh;display:flex;flex-direction:column">
+
+  <sc-if value="{{ showBar }}" hint-placeholder-val="{{ true }}">
+    <div style="background:#143f58;color:#e9eef0;font-size:12px;letter-spacing:.08em">
+      <div style="max-width:1240px;margin:0 auto;padding:10px 28px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px">
+        <span>2026 Annual CVG Harvest Fundraiser · Sunday, July 19 · 4:00–8:00 PM</span>
+        <span style="color:#f7a9c9;font-weight:600">Tickets will go on sale soon</span>
+      </div>
+    </div>
+  </sc-if>
+
+  <header style="background:#faf8f4;border-bottom:1px solid #e6e1d8;position:sticky;top:0;z-index:20">
+    <div style="max-width:1240px;margin:0 auto;padding:16px 28px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px">
+      <a href="index.html" style="display:flex;align-items:center">
+        <img src="https://www.cancervictorygarden.com/uploads/1/1/1/8/11186754/published/cvg-logo.png?1694798664" alt="Cancer Victory Garden" style="height:58px;width:auto">
+      </a>
+      <nav style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase">
+        <a href="index.html" style="color:#143f58;text-decoration:none;border-bottom:1px solid #d9558f;padding-bottom:3px">Home</a>
+        <a href="signature-events.html" style="color:#4a5752;text-decoration:none" style-hover="color:#143f58">Signature Events</a>
+        <a href="garden-champions.html" style="color:#4a5752;text-decoration:none" style-hover="color:#143f58">Garden Champions</a>
+        <a href="classes.html" style="color:#4a5752;text-decoration:none" style-hover="color:#143f58">Classes</a>
+        <a href="about.html" style="color:#4a5752;text-decoration:none" style-hover="color:#143f58">About</a>
+        <a href="donors.html" style="color:#4a5752;text-decoration:none" style-hover="color:#143f58">Donors</a>
+        <a href="newsletters.html" style="color:#4a5752;text-decoration:none" style-hover="color:#143f58">Newsletters</a>
+        <a href="https://donate.stripe.com/fZe9BIeix06o8QU4gg" target="_blank" style="color:#fff;background:#d9558f;text-decoration:none;padding:12px 22px;border-radius:2px" style-hover="background:#c2457d;color:#fff">Donate</a>
+      </nav>
+    </div>
+  </header>
+
+  <section data-screen-label="01 Hero" style="position:relative;background:#0f2e40 url('https://www.cancervictorygarden.com/uploads/1/1/1/8/11186754/img-9551_orig.jpeg') center 40%/cover no-repeat;color:#fff">
+    <div style="position:absolute;inset:0;background:linear-gradient(100deg,rgba(15,46,64,.94) 0%,rgba(15,46,64,.78) 45%,rgba(15,46,64,.4) 100%)"></div>
+    <div style="position:relative;max-width:1240px;margin:0 auto;padding:110px 28px 120px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:56px;align-items:center">
+      <div style="display:flex;flex-direction:column;gap:26px">
+        <img src="https://www.cancervictorygarden.com/uploads/1/1/1/8/11186754/editor/cancer-survivor-1.png?1696610161" alt="Cancer survivor" style="width:120px">
+        <div style="font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#f7a9c9">An idea inspired by a cancer survivor community</div>
+        <h1 style="margin:0;font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(40px,5.4vw,68px);line-height:1.06;letter-spacing:-.01em;text-wrap:balance">Join us for our annual Cancer Victory Garden <em style="color:#f7a9c9">Signature Events</em></h1>
+        <div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:8px">
+          <a href="signature-events.html" style="background:#fff;color:#143f58;text-decoration:none;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:17px 28px;border-radius:2px" style-hover="background:#f7a9c9;color:#143f58">Signature Events</a>
+          <a href="https://donate.stripe.com/fZe9BIeix06o8QU4gg" target="_blank" style="color:#fff;text-decoration:none;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:16px 28px;border:1px solid rgba(255,255,255,.6);border-radius:2px" style-hover="border-color:#fff;color:#fff;background:rgba(255,255,255,.08)">Donate</a>
+        </div>
+      </div>
+      <div style="background:#faf8f4;color:#24302c;padding:40px 40px 36px;border-radius:2px;box-shadow:0 30px 60px -20px rgba(0,0,0,.45);display:flex;flex-direction:column;gap:20px;max-width:520px;justify-self:start;width:100%">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+          <span style="font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#d9558f">Save the Date</span>
+          <span style="font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#6b7772">Next event</span>
+        </div>
+        <div style="font-family:'Playfair Display',serif;font-size:30px;line-height:1.2;color:#143f58">2026 Annual CVG Harvest Fundraiser</div>
+        <div style="font-size:15px;line-height:1.6;color:#4a5752">Our next event will be the Annual Harvest Festival Fundraiser — <strong style="color:#24302c">a Mexican street party.</strong></div>
+        <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid #e6e1d8;border-bottom:1px solid #e6e1d8">
+          <div style="padding:16px 0;border-right:1px solid #e6e1d8">
+            <div style="font-size:10.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#6b7772">Date</div>
+            <div style="font-family:'Playfair Display',serif;font-size:22px;color:#143f58;margin-top:4px">July 19, 2026</div>
+          </div>
+          <div style="padding:16px 0 16px 20px">
+            <div style="font-size:10.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#6b7772">Sunday afternoon</div>
+            <div style="font-family:'Playfair Display',serif;font-size:22px;color:#143f58;margin-top:4px">4:00–8:00 PM</div>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px;font-size:14px;line-height:1.5;color:#3a4642">
+          <div style="display:flex;gap:12px;align-items:baseline"><span style="width:6px;height:6px;background:#d9558f;transform:rotate(45deg);flex-shrink:0"></span>Live mariachi &amp; dancing</div>
+          <div style="display:flex;gap:12px;align-items:baseline"><span style="width:6px;height:6px;background:#d9558f;transform:rotate(45deg);flex-shrink:0"></span>Street tacos, margaritas, wine, &amp; cerveza, agua fresca</div>
+        </div>
+        <div style="background:#f3e6ec;padding:14px 16px;font-size:12.5px;font-weight:600;letter-spacing:.06em;color:#8a2f58;text-transform:uppercase;line-height:1.5">Tickets will go on sale soon! Tickets sell out quickly so don't wait!</div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="02 Explore" style="padding:100px 28px;background:#faf8f4">
+    <div style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:24px">
+      <a href="signature-events.html" style="text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:20px" style-hover="color:#143f58">
+        <div style="aspect-ratio:4/5;overflow:hidden;background:#e6e1d8"><img src="https://www.cancervictorygarden.com/uploads/1/1/1/8/11186754/published/linda-b-flowers-85-orig.jpg?1759787035" alt="Signature events" style="width:100%;height:100%;object-fit:cover"></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;border-top:1px solid #24302c;padding-top:16px">
+          <span style="font-family:'Playfair Display',serif;font-size:26px;color:#143f58">Signature Events</span>
+          <span style="font-size:20px;color:#d9558f">→</span>
+        </div>
+      </a>
+      <a href="garden-champions.html" style="text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:20px">
+        <div style="aspect-ratio:4/5;overflow:hidden;background:#e6e1d8"><img src="https://www.cancervictorygarden.com/uploads/1/1/1/8/11186754/1_orig.jpg" alt="Garden champions" style="width:100%;height:100%;object-fit:cover"></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;border-top:1px solid #24302c;padding-top:16px">
+          <span style="font-family:'Playfair Display',serif;font-size:26px;color:#143f58">Garden Champions</span>
+          <span style="font-size:20px;color:#d9558f">→</span>
+        </div>
+      </a>
+      <a href="newsletters.html" style="text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:20px">
+        <div style="aspect-ratio:4/5;overflow:hidden;background:#e6e1d8"><img src="https://www.cancervictorygarden.com/uploads/1/1/1/8/11186754/published/4.jpg?1759786994" alt="Newsletter" style="width:100%;height:100%;object-fit:cover"></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;border-top:1px solid #24302c;padding-top:16px">
+          <span style="font-family:'Playfair Display',serif;font-size:26px;color:#143f58">Newsletter</span>
+          <span style="font-size:20px;color:#d9558f">→</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section data-screen-label="03 Sanctuary" style="padding:110px 28px;background:#fff">
+    <div style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:72px;align-items:center">
+      <div style="aspect-ratio:1/1;overflow:hidden;background:#e6e1d8"><img src="https://www.cancervictorygarden.com/uploads/1/1/1/8/11186754/img-9551_orig.jpeg" alt="The garden" style="width:100%;height:100%;object-fit:cover"></div>
+      <div style="display:flex;flex-direction:column;gap:24px">
+        <div style="font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#d9558f">San Luis Obispo</div>
+        <h2 style="margin:0;font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(32px,3.6vw,46px);line-height:1.15;color:#143f58;text-wrap:balance">A Garden Sanctuary of Growth and Support for Cancer Patients</h2>
+        <p style="margin:0;font-size:16px;line-height:1.8;color:#3a4642;text-wrap:pretty">Welcome to a San Luis Obispo garden sanctuary that embodies hope and growth. We unite survivors, caregivers, and the steadfast backing of loved ones in a vibrant setting. In partnership with esteemed institutions, we offer solace and inspiration to cancer patients and survivors.</p>
+        <p style="margin:0;font-size:16px;line-height:1.8;color:#3a4642;text-wrap:pretty">Our survivor volunteers plant flower seeds, grow them to maturity in our garden, cut the flowers, arrange them into bouquets in donated vases, and then distribute them to our cancer related charities, all the while enjoying the support and camaraderie of fellow cancer patients, survivors and volunteers.</p>
+        <div style="margin-top:12px;border-top:1px solid #e6e1d8;padding-top:22px;display:flex;flex-direction:column;gap:14px">
+          <div style="font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#6b7772">In partnership with</div>
+          <div style="display:flex;flex-wrap:wrap;gap:10px 28px;font-family:'Playfair Display',serif;font-size:18px;color:#143f58">
+            <span>UCLA Oncology</span>
+            <span>Hearst Cancer Resource Center — Dignity Health</span>
+            <span>Dignity Infusion Center</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="04 Mission" style="padding:110px 28px;background:#eef1ec">
+    <div style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:72px;align-items:center">
+      <div style="display:flex;flex-direction:column;gap:24px">
+        <div style="font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#d9558f">Our Mission</div>
+        <h2 style="margin:0;font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(32px,3.6vw,46px);line-height:1.15;color:#143f58;text-wrap:balance">Volunteer, Heal, and Share Love through Gardening &amp; Flowers</h2>
+        <p style="margin:0;font-size:16px;line-height:1.8;color:#3a4642;text-wrap:pretty">We, as cancer survivors, come together to support and inspire others in their cancer journeys through gardening. The garden serves as a healing sanctuary where patients find hope amid vibrant blooms.</p>
+        <p style="margin:0;font-size:16px;line-height:1.8;color:#3a4642;text-wrap:pretty">Our mission is to empower survivors to volunteer in the garden, spreading hope throughout our community. Flower arranging classes led by survivors and volunteers create beautiful arrangements filled with love for cancer patients. This selfless act fosters support, personal growth, and an appreciation for life's fragility.</p>
+        <p style="margin:0;font-size:16px;line-height:1.8;color:#3a4642;text-wrap:pretty">In this space of resilience and compassion, we share love, touch lives, and make a meaningful impact on individuals and communities.</p>
+        <div style="margin-top:8px;background:#143f58;color:#fff;padding:26px 30px;display:grid;grid-template-columns:auto 1fr;gap:6px 24px;align-items:center">
+          <div style="grid-row:span 2;font-family:'Playfair Display',serif;font-size:44px;line-height:1;color:#f7a9c9">Mon</div>
+          <div style="font-size:15px;font-weight:600">Join us in the garden every Monday from 8:30–10:30 am</div>
+          <div style="font-size:13px;color:#c7d3d8">with the Cancer Victory Garden Team</div>
+        </div>
+      </div>
+      <div style="aspect-ratio:4/5;overflow:hidden;background:#dfe3dc"><img src="https://www.cancervictorygarden.com/uploads/1/1/1/8/11186754/published/linda-cvg.jpg?1687974890" alt="Cancer Victory Garden volunteer" style="width:100%;height:100%;object-fit:cover"></div>
+    </div>
+  </section>
+
+  <section data-screen-label="05 Subscription" style="padding:110px 28px;background:#d9558f;color:#fff">
+    <div style="max-width:1000px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:44px;text-align:center">
+      <div style="display:flex;flex-direction:column;gap:16px;align-items:center">
+        <div style="font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#ffe3ef">Seasonal Blooms</div>
+        <h2 style="margin:0;font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(34px,4vw,52px);line-height:1.12">Cancer Victory Garden<br>Flower Subscription</h2>
+      </div>
+      <img src="https://www.cancervictorygarden.com/uploads/1/1/1/8/11186754/pink-green-floral-illustrative-flower-market-flyer_orig.png" alt="Flower subscription flyer" style="width:100%;max-width:760px;height:auto;box-shadow:0 30px 60px -24px rgba(80,10,40,.55)">
+    </div>
+  </section>
+
+  <section data-screen-label="06 Support" style="padding:110px 28px;background:#faf8f4">
+    <div style="max-width:1240px;margin:0 auto;display:flex;flex-direction:column;gap:64px">
+      <div style="max-width:760px;margin:0 auto;text-align:center;display:flex;flex-direction:column;gap:20px">
+        <div style="font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#d9558f">Get Involved</div>
+        <h2 style="margin:0;font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(34px,4vw,52px);line-height:1.12;color:#143f58">You Can Become a Pillar of Garden Support</h2>
+        <p style="margin:0;font-size:17px;line-height:1.7;color:#3a4642;text-wrap:pretty">You have the power to become a vital pillar of support for our garden sanctuary. There are various ways you can contribute and make a lasting impact.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:28px">
+        <div style="background:#fff;border:1px solid #e6e1d8;padding:52px 44px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:22px">
+          <img src="https://www.cancervictorygarden.com/uploads/1/1/1/8/11186754/published/gardening.png?1690912450" alt="Gardening" style="height:110px;width:auto">
+          <h3 style="margin:0;font-family:'Playfair Display',serif;font-weight:400;font-size:32px;color:#143f58">Garden Champions</h3>
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4a5752;max-width:400px;text-wrap:pretty">For those compassionate volunteers who yearn to nurture the garden sanctuary, from planting seedlings to delivering hope to patients.</p>
+          <a href="garden-champions.html" style="margin-top:8px;background:#143f58;color:#fff;text-decoration:none;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:17px 28px;border-radius:2px" style-hover="background:#0e2f42;color:#fff">I want to be a Garden Champion</a>
+        </div>
+        <div style="background:#fff;border:1px solid #e6e1d8;padding:52px 44px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:22px">
+          <img src="https://www.cancervictorygarden.com/uploads/1/1/1/8/11186754/editor/give-love.png?1688147341" alt="Give love" style="height:110px;width:auto">
+          <h3 style="margin:0;font-family:'Playfair Display',serif;font-weight:400;font-size:32px;color:#143f58">Hope Contributors</h3>
+          <p style="margin:0;font-size:15.5px;line-height:1.75;color:#4a5752;max-width:400px;text-wrap:pretty">Tangible support enables us to create an environment where nature's beauty can flourish, offering respite and healing to patients, and survivors.</p>
+          <a href="https://donate.stripe.com/fZe9BIeix06o8QU4gg" target="_blank" style="margin-top:8px;background:#d9558f;color:#fff;text-decoration:none;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:17px 28px;border-radius:2px" style-hover="background:#c2457d;color:#fff">I want to be a Hope Contributor</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background:#0f2e40;color:#c7d3d8;padding:80px 28px 36px">
+    <div style="max-width:1240px;margin:0 auto;display:flex;flex-direction:column;gap:56px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:40px">
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <div style="font-family:'Playfair Display',serif;font-size:28px;color:#fff;line-height:1.2">Cancer Victory Garden</div>
+          <p style="margin:0;font-size:14px;line-height:1.7;max-width:320px">A San Luis Obispo garden sanctuary that embodies hope and growth.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;font-size:14px">
+          <div style="font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#f7a9c9;margin-bottom:4px">Explore</div>
+          <a href="signature-events.html" style="color:#e9eef0;text-decoration:none" style-hover="color:#f7a9c9">Signature Events</a>
+          <a href="garden-champions.html" style="color:#e9eef0;text-decoration:none" style-hover="color:#f7a9c9">Garden Champions</a>
+          <a href="classes.html" style="color:#e9eef0;text-decoration:none" style-hover="color:#f7a9c9">Classes</a>
+          <a href="newsletters.html" style="color:#e9eef0;text-decoration:none" style-hover="color:#f7a9c9">Newsletters</a>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;font-size:14px">
+          <div style="font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#f7a9c9;margin-bottom:4px">Organization</div>
+          <a href="about.html" style="color:#e9eef0;text-decoration:none" style-hover="color:#f7a9c9">About</a>
+          <a href="donors.html" style="color:#e9eef0;text-decoration:none" style-hover="color:#f7a9c9">Donors</a>
+          <a href="https://donate.stripe.com/fZe9BIeix06o8QU4gg" target="_blank" style="color:#e9eef0;text-decoration:none" style-hover="color:#f7a9c9">Donate</a>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:14px;font-size:14px">
+          <div style="font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#f7a9c9;margin-bottom:4px">In the garden</div>
+          <div style="color:#e9eef0;line-height:1.6">Every Monday<br>8:30–10:30 am</div>
+          <a href="https://donate.stripe.com/fZe9BIeix06o8QU4gg" target="_blank" style="align-self:flex-start;background:#d9558f;color:#fff;text-decoration:none;font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:14px 22px;border-radius:2px" style-hover="background:#c2457d;color:#fff">Donate</a>
+        </div>
+      </div>
+      <div style="border-top:1px solid rgba(255,255,255,.14);padding-top:24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:12.5px;color:#9fb1b9">
+        <span>© 2026 Cancer Victory Garden · San Luis Obispo, CA</span>
+        <span>Made with ♥ Cancer Victory Garden</span>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showAnnouncementBar&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return { showBar: this.props.showAnnouncementBar ?? true };
+  }
+}
+</script>
+</body>
+</html>

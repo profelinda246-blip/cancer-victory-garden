@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Donors — Cancer Victory Garden</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:Montserrat,sans-serif;color:#24302c;background:#faf8f4;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#1b597c}a:hover{color:#d9558f}
+img{display:block;max-width:100%}
+</style>
+</helmet>
+<div style="min-height:100vh;display:flex;flex-direction:column">
+  <header style="background:#faf8f4;border-bottom:1px solid #e6e1d8;position:sticky;top:0;z-index:20">
+    <div style="max-width:1240px;margin:0 auto;padding:16px 28px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px">
+      <a href="index.html" style="display:flex;align-items:center"><img src="https://www.cancervictorygarden.com/uploads/1/1/1/8/11186754/published/cvg-logo.png?1694798664" alt="Cancer Victory Garden" style="height:58px;width:auto"></a>
+      <nav style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase">
+        <a href="index.html" style="color:#4a5752;text-decoration:none" style-hover="color:#143f58">Home</a>
+        <a href="signature-events.html" style="color:#4a5752;text-decoration:none" style-hover="color:#143f58">Signature Events</a>
+        <a href="garden-champions.html" style="color:#4a5752;text-decoration:none" style-hover="color:#143f58">Garden Champions</a>
+        <a href="classes.html" style="color:#4a5752;text-decoration:none" style-hover="color:#143f58">Classes</a>
+        <a href="about.html" style="color:#4a5752;text-decoration:none" style-hover="color:#143f58">About</a>
+        <a href="donors.html" style="color:#143f58;text-decoration:none;border-bottom:1px solid #d9558f;padding-bottom:3px">Donors</a>
+        <a href="newsletters.html" style="color:#4a5752;text-decoration:none" style-hover="color:#143f58">Newsletters</a>
+        <a href="https://donate.stripe.com/fZe9BIeix06o8QU4gg" target="_blank" style="color:#fff;background:#d9558f;text-decoration:none;padding:12px 22px;border-radius:2px" style-hover="background:#c2457d;color:#fff">Donate</a>
+      </nav>
+    </div>
+  </header>
+
+  <section data-screen-label="01 Intro" style="background:#0f2e40;color:#fff">
+    <div style="max-width:1240px;margin:0 auto;padding:96px 28px;display:flex;flex-direction:column;gap:22px">
+      <div style="font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#f7a9c9">Our Donors</div>
+      <h1 style="margin:0;font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(40px,5vw,62px);line-height:1.08;max-width:900px;text-wrap:balance">We are truly grateful to all our Donors who bring <em style="color:#f7a9c9">tears of joy</em> to cancer patients</h1>
+      <p style="margin:0;font-size:16px;line-height:1.75;color:#c7d3d8;max-width:560px">The CVG thanks you for visiting our participating donors.</p>
+    </div>
+  </section>
+
+  <section data-screen-label="02 Donor list" style="padding:100px 28px;background:#faf8f4">
+    <div style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,360px),1fr));gap:20px">
+      <sc-for list="{{ donors }}" as="d" hint-placeholder-count="10">
+        <div style="background:#fff;border:1px solid #e6e1d8;display:flex;flex-direction:column">
+          <div style="height:180px;display:flex;align-items:center;justify-content:center;padding:28px;border-bottom:1px solid #f0ece4"><img src="{{ d.logo }}" alt="{{ d.name }}" style="max-height:124px;max-width:100%;width:auto;object-fit:contain"></div>
+          <div style="padding:26px 28px 28px;display:flex;flex-direction:column;gap:10px;flex:1">
+            <h3 style="margin:0;font-family:'Playfair Display',serif;font-weight:400;font-size:23px;line-height:1.25;color:#143f58">{{ d.name }}</h3>
+            <sc-for list="{{ d.lines }}" as="l" hint-placeholder-count="1">
+              <div style="font-size:14px;line-height:1.6;color:#4a5752">{{ l }}</div>
+            </sc-for>
+            <sc-if value="{{ d.url }}" hint-placeholder-val="{{ true }}">
+              <a href="{{ d.url }}" target="_blank" style="margin-top:auto;padding-top:12px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#d9558f;text-decoration:none" style-hover="color:#143f58">Visit website →</a>
+            </sc-if>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section data-screen-label="03 CTA" style="padding:90px 28px;background:#d9558f;color:#fff">
+    <div style="max-width:900px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:26px;text-align:center">
+      <h2 style="margin:0;font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(30px,3.6vw,46px);line-height:1.15">Become a Hope Contributor</h2>
+      <a href="https://donate.stripe.com/fZe9BIeix06o8QU4gg" target="_blank" style="background:#fff;color:#8a2f58;text-decoration:none;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:17px 30px;border-radius:2px" style-hover="background:#143f58;color:#fff">Donate</a>
+    </div>
+  </section>
+
+  <footer style="background:#0f2e40;color:#c7d3d8;padding:56px 28px 36px">
+    <div style="max-width:1240px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:20px;font-size:13px">
+      <div style="font-family:'Playfair Display',serif;font-size:24px;color:#fff">Cancer Victory Garden</div>
+      <div style="display:flex;flex-wrap:wrap;gap:10px 22px">
+        <a href="index.html" style="color:#e9eef0;text-decoration:none" style-hover="color:#f7a9c9">Home</a>
+        <a href="signature-events.html" style="color:#e9eef0;text-decoration:none" style-hover="color:#f7a9c9">Signature Events</a>
+        <a href="garden-champions.html" style="color:#e9eef0;text-decoration:none" style-hover="color:#f7a9c9">Garden Champions</a>
+        <a href="classes.html" style="color:#e9eef0;text-decoration:none" style-hover="color:#f7a9c9">Classes</a>
+        <a href="about.html" style="color:#e9eef0;text-decoration:none" style-hover="color:#f7a9c9">About</a>
+        <a href="newsletters.html" style="color:#e9eef0;text-decoration:none" style-hover="color:#f7a9c9">Newsletters</a>
+      </div>
+      <span style="color:#9fb1b9">Made with ♥ Cancer Victory Garden</span>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const B = 'https://www.cancervictorygarden.com/uploads/1/1/1/8/11186754/';
+const DONORS = [
+  { name: 'Affinity Chiropractic Center', logo: B + 'index-element50_orig.jpg', lines: ['3565 So. Higuera St. San Luis Obispo, 93401', '(805) 544-8884'], url: 'https://affinchiro.com/' },
+  { name: 'Clever Ducks, Central Coast IT Experts', logo: B + 'published/cd.webp?1757537348', lines: ['1313 Broad Street, San Luis Obispo, CA 93401', '(805) 543-1930'], url: '' },
+  { name: 'Handyman Crackerjack', logo: B + 'cracker-jack-saw-final_orig.jpg', lines: ['Bryan Asher', '(805) 234-3992'], url: 'http://www.handymancrackerjack.com' },
+  { name: '15 Degrees C Wine Shop', logo: B + '15c_orig.png', lines: ['3590 Broad St, San Luis Obispo, CA', 'Ali Rush, Advanced Sommelier, Owner 15C Winebar', '(805) 434-1554'], url: 'http://www.15degreescwines.com/' },
+  { name: 'D & D Floral', logo: B + 'published/1518205740479-6.webp?1689706497', lines: ['Debbie Diez, Los Osos', '(805) 528-4230'], url: 'https://www.danddfloraldesign.com/' },
+  { name: 'Wearable Imaging Inc.', logo: B + 'pic_orig.png', lines: ['Robin Richter — woman owned business to meet all your imaging needs!', '(949) 888-7837'], url: 'https://www.wearableimaging.com/' },
+  { name: 'Dennís Eamon Young Photo', logo: B + 'published/2.png?1742321818', lines: ['(805) 540-1271', 'Dennis photographs all the CVG Events and we are entirely grateful to share these in our newsletters!'], url: 'http://www.denniseamonyoungphoto.com/' },
+  { name: 'WM Design House', logo: B + 'editor/3.png?1743444812', lines: [], url: 'https://wmdesignhouse.com/' },
+  { name: 'Maguire Investments LLC', logo: B + 'maguire-investments-logo-1603301916_orig.png', lines: ['(1) 805-922-6901'], url: 'https://www.maguireinvest.com/' },
+  { name: 'Pandora Arts', logo: B + 'pandoralogo_orig.png', lines: ['Pandora Nash Karner, Los Osos', '(805) 528-7014'], url: 'https://www.pandoraarts.com/' }
+];
+class Component extends DCLogic {
+  renderVals() { return { donors: DONORS }; }
+}
+</script>
+</body>
+</html>

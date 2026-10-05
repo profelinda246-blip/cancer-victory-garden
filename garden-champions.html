@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Garden Champions — Cancer Victory Garden</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:Montserrat,sans-serif;color:#24302c;background:#faf8f4;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#1b597c}a:hover{color:#d9558f}
+img{display:block;max-width:100%}
+</style>
+</helmet>
+<div style="min-height:100vh;display:flex;flex-direction:column">
+  <header style="background:#faf8f4;border-bottom:1px solid #e6e1d8;position:sticky;top:0;z-index:20">
+    <div style="max-width:1240px;margin:0 auto;padding:16px 28px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px">
+      <a href="index.html" style="display:flex;align-items:center"><img src="https://www.cancervictorygarden.com/uploads/1/1/1/8/11186754/published/cvg-logo.png?1694798664" alt="Cancer Victory Garden" style="height:58px;width:auto"></a>
+      <nav style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase">
+        <a href="index.html" style="color:#4a5752;text-decoration:none" style-hover="color:#143f58">Home</a>
+        <a href="signature-events.html" style="color:#4a5752;text-decoration:none" style-hover="color:#143f58">Signature Events</a>
+        <a href="garden-champions.html" style="color:#143f58;text-decoration:none;border-bottom:1px solid #d9558f;padding-bottom:3px">Garden Champions</a>
+        <a href="classes.html" style="color:#4a5752;text-decoration:none" style-hover="color:#143f58">Classes</a>
+        <a href="about.html" style="color:#4a5752;text-decoration:none" style-hover="color:#143f58">About</a>
+        <a href="donors.html" style="color:#4a5752;text-decoration:none" style-hover="color:#143f58">Donors</a>
+        <a href="newsletters.html" style="color:#4a5752;text-decoration:none" style-hover="color:#143f58">Newsletters</a>
+        <a href="https://donate.stripe.com/fZe9BIeix06o8QU4gg" target="_blank" style="color:#fff;background:#d9558f;text-decoration:none;padding:12px 22px;border-radius:2px" style-hover="background:#c2457d;color:#fff">Donate</a>
+      </nav>
+    </div>
+  </header>
+
+  <section data-screen-label="01 Intro" style="background:#0f2e40;color:#fff">
+    <div style="max-width:1240px;margin:0 auto;padding:96px 28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:56px;align-items:end">
+      <div style="display:flex;flex-direction:column;gap:22px">
+        <div style="font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#f7a9c9">Volunteer</div>
+        <h1 style="margin:0;font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(40px,5.4vw,68px);line-height:1.06;text-wrap:balance">Be a Garden Champion and <em style="color:#f7a9c9">join us!</em></h1>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px;font-size:16px;line-height:1.75;color:#c7d3d8">
+        <p style="margin:0">Gardening, cutting blooms, creating arrangements, and finally delivering flowers happens weekly in the garden throughout the blooming season — generally late May through September, depending on weather.</p>
+        <p style="margin:0">You may volunteer as often as you like. Some garden tasks have limited spaces for volunteers, so sign up for the dates you want ASAP.</p>
+        <a href="mailto:profelinda246@gmail.com" style="align-self:flex-start;margin-top:8px;background:#fff;color:#143f58;text-decoration:none;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:17px 28px;border-radius:2px" style-hover="background:#f7a9c9;color:#143f58">Email Linda Ward</a>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="02 Roles" style="padding:100px 28px;background:#faf8f4">
+    <div style="max-width:1240px;margin:0 auto;display:flex;flex-direction:column">
+      <sc-for list="{{ roles }}" as="r" hint-placeholder-count="5">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:24px 64px;padding:48px 0;border-top:1px solid #d8d2c6;align-items:start">
+          <div style="display:flex;gap:24px;align-items:center">
+            <div style="width:96px;height:96px;flex-shrink:0;background:#fff;border:1px solid #e6e1d8;display:flex;align-items:center;justify-content:center"><img src="{{ r.icon }}" alt="" style="width:64px;height:64px;object-fit:contain"></div>
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <div style="font-size:11px;font-weight:700;letter-spacing:.2em;color:#d9558f">{{ r.num }}</div>
+              <h2 style="margin:0;font-family:'Playfair Display',serif;font-weight:400;font-size:30px;line-height:1.15;color:#143f58">{{ r.title }}</h2>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <sc-if value="{{ r.note }}" hint-placeholder-val="{{ false }}">
+              <div style="background:#f3e6ec;padding:14px 16px;font-size:13.5px;line-height:1.6;color:#8a2f58;font-weight:600">{{ r.note }}</div>
+            </sc-if>
+            <sc-for list="{{ r.body }}" as="para" hint-placeholder-count="1">
+              <p style="margin:0;font-size:16px;line-height:1.75;color:#3a4642;text-wrap:pretty">{{ para }}</p>
+            </sc-for>
+            <a href="mailto:profelinda246@gmail.com" style="align-self:flex-start;margin-top:6px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#143f58;text-decoration:none;border-bottom:1px solid #d9558f;padding-bottom:4px" style-hover="color:#d9558f">I want to be a Garden Champion →</a>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <footer style="background:#0f2e40;color:#c7d3d8;padding:56px 28px 36px">
+    <div style="max-width:1240px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:20px;font-size:13px">
+      <div style="font-family:'Playfair Display',serif;font-size:24px;color:#fff">Cancer Victory Garden</div>
+      <div style="display:flex;flex-wrap:wrap;gap:10px 22px">
+        <a href="index.html" style="color:#e9eef0;text-decoration:none" style-hover="color:#f7a9c9">Home</a>
+        <a href="signature-events.html" style="color:#e9eef0;text-decoration:none" style-hover="color:#f7a9c9">Signature Events</a>
+        <a href="classes.html" style="color:#e9eef0;text-decoration:none" style-hover="color:#f7a9c9">Classes</a>
+        <a href="about.html" style="color:#e9eef0;text-decoration:none" style-hover="color:#f7a9c9">About</a>
+        <a href="donors.html" style="color:#e9eef0;text-decoration:none" style-hover="color:#f7a9c9">Donors</a>
+        <a href="newsletters.html" style="color:#e9eef0;text-decoration:none" style-hover="color:#f7a9c9">Newsletters</a>
+      </div>
+      <span style="color:#9fb1b9">Made with ♥ Cancer Victory Garden</span>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const U = 'https://www.cancervictorygarden.com/uploads/1/1/1/8/11186754/published/';
+const ROLES = [
+  { title: 'Gardener', icon: U + 'gardening.png?1690306758', body: ['As a Gardener you will have the opportunity to meet with other gardeners to decide what should be planted in the garden, when seeds are to be planted, work with the Event Planner to conduct a Garden Planting Party, grow seedlings in the garden shed, tend the garden, delegate garden tours to Garden Guides, watch the garden grow, and communicate with flower arrangers to decide what flowers will be ready to cut weekly so they can plan their weekly arrangements.'] },
+  { title: 'Gardener Docent & Garden Tour', icon: U + 'tour-guide.png?1688422421', body: ['The role of a Garden Docent is to offer small tours to those who want to visit or photograph the garden. Describe the process of how the garden is planned, planted, and harvested. Demonstrate how and where the arrangements are created. Describe our process of interacting with the community to share our harvest.', 'Be a Garden Ambassador and share our project with others. Collect a list of emails when visitors arrive.'] },
+  { title: 'Event Planner & Volunteer Server', icon: U + 'planner.png?1688422495', body: ['The role of Event Server or Volunteer Server is to dress for the occasion and to help prepare, serve, and present food in a stylish manner at our Signature Events — asking guests if they need anything. And finally, be part of the clean up group.'] },
+  { title: 'Floral Arranger', icon: U + 'florist.png?1688422559', body: ['As a flower arranger you will select prime garden flowers for cutting and use in stunning colorful flower arrangements.', 'We harvest Mondays at 8:00 beginning with flower growing season, which may possibly begin in May, depending on the weather. We arrange flowers on Mondays during growing season, 9:00–11:00am, then make deliveries to Hearst Resource Center, Dignity Infusion Center, and Grace Bible Church in Arroyo Grande.', 'Linda creates a text group to make announcements and to see who will make it to arrange. If you would like to join us we WELCOME new folks! Be sure to send Linda an email if you want to be on our list.'] },
+  { title: 'Vase Collection Ambassador', icon: U + 'flower.png?1688422606', note: 'At this time we have a great resource of vases in the garden waiting to be used and no more storage. Please keep your vases in your garage until we have more room. Your generosity knows no bounds! Thank you!', body: ['As a Vase Collection Ambassador you will chat with everyone you meet and know to ask if they would like to contribute to our project by clearing out their closets of florist vases they no longer want. You will ask donors to run them through their dishwasher so they are sparkling clean, then pack them up for your pickup. After pickup you will deliver them to the garden for use.'] }
+];
+class Component extends DCLogic {
+  renderVals() {
+    return { roles: ROLES.map((r, i) => ({ ...r, note: r.note || '', num: String(i + 1).padStart(2, '0') })) };
+  }
+}
+</script>
+</body>
+</html>
