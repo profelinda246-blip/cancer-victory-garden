@@ -1,0 +1,51 @@
+name: Fetch images from old Weebly site
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - ".github/weebly-images.txt"
+      - ".github/workflows/fetch-weebly-images.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download images
+        run: |
+          SRC="https://11186754-870362278273956062.preview.editmysite.com"
+          ok=0; miss=0; : > missing.txt
+          while IFS= read -r p; do
+            [ -z "$p" ] && continue
+            dest="${p#/}"
+            [ -s "$dest" ] && { ok=$((ok+1)); continue; }
+            mkdir -p "$(dirname "$dest")"
+            file="${p##*/}"; base="/uploads/1/1/1/8/11186754"
+            got=""
+            for c in "$p" "${p/\/published\//\/editor\/}" "${p/\/editor\//\/published\/}" "$base/$file" "$base/published/$file" "$base/editor/$file"; do
+              if curl -fsSL --max-time 60 -o "$dest" "$SRC$c" && file -b --mime-type "$dest" | grep -q '^image/'; then got=1; break; fi
+              rm -f "$dest"
+            done
+            if [ -n "$got" ]; then ok=$((ok+1)); else miss=$((miss+1)); echo "$p" >> missing.txt; fi
+          done < .github/weebly-images.txt
+          echo "Downloaded: $ok  Missing: $miss"
+          cat missing.txt
+          mv missing.txt .github/weebly-missing.txt
+      - name: Commit images
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898469+github-actions[bot]@users.noreply.github.com"
+          git add uploads .github/weebly-missing.txt
+          git diff --cached --quiet && exit 0
+          git commit -m "Add images copied from old Weebly site"
+          git push
+      - name: Redeploy Pages
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run static.yml --ref main
