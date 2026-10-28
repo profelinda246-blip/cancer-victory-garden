@@ -2,6 +2,8 @@ name: Visual audit (temporary)
 on:
   push:
     branches: ["audit-screens"]
+permissions:
+  contents: write
 jobs:
   audit:
     runs-on: ubuntu-latest
@@ -12,7 +14,7 @@ jobs:
           python -m http.server 8765 >/dev/null 2>&1 &
           sleep 2
           python .github/audit/ci_audit.py
-      - uses: actions/upload-artifact@v4
-        with:
-          name: shots
-          path: shots
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898469+github-actions[bot]@users.noreply.github.com"
+          git add -f shots && git commit -qm "audit shots" && git push
