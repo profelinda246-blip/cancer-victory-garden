@@ -16,6 +16,17 @@ body{margin:0;font-family:Montserrat,sans-serif;color:#24302c;background:#faf8f4
 *{box-sizing:border-box}
 a{color:#1b597c}a:hover{color:#d9558f}
 img{display:block;max-width:100%}
+/* mobile polish */
+@media (max-width:720px){
+header>div{position:relative;padding:12px 16px!important;gap:10px!important}
+header>div>a:first-child img{height:44px!important}
+header nav{flex-wrap:nowrap!important;overflow-x:auto;width:100%;gap:20px!important;padding:4px 0 8px;scrollbar-width:none}
+header nav::-webkit-scrollbar{display:none}
+header nav a{white-space:nowrap;flex:none}
+header nav a:last-child{position:absolute;top:18px;right:16px;padding:10px 16px!important}
+section[style*="px 28px"]{padding-left:18px!important;padding-right:18px!important}
+}
+div:has(> img[src*="15c_orig"]),div:has(> img[src*="pic_orig"]),div:has(> img[src*="1518205740479-6"]){background:#143f58}
 </style>
 </helmet>
 <div style="min-height:100vh;display:flex;flex-direction:column">

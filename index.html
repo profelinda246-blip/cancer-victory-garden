@@ -16,6 +16,17 @@ body{margin:0;font-family:Montserrat,sans-serif;color:#24302c;background:#faf8f4
 *{box-sizing:border-box}
 a{color:#1b597c}a:hover{color:#d9558f}
 img{display:block;max-width:100%}
+/* mobile polish */
+@media (max-width:720px){
+header>div{position:relative;padding:12px 16px!important;gap:10px!important}
+header>div>a:first-child img{height:44px!important}
+header nav{flex-wrap:nowrap!important;overflow-x:auto;width:100%;gap:20px!important;padding:4px 0 8px;scrollbar-width:none}
+header nav::-webkit-scrollbar{display:none}
+header nav a{white-space:nowrap;flex:none}
+header nav a:last-child{position:absolute;top:18px;right:16px;padding:10px 16px!important}
+section[style*="px 28px"]{padding-left:18px!important;padding-right:18px!important}
+}
+div:has(> img[src*="15c_orig"]),div:has(> img[src*="pic_orig"]),div:has(> img[src*="1518205740479-6"]){background:#143f58}
 </style>
 </helmet>
 <div style="min-height:100vh;display:flex;flex-direction:column">
@@ -122,7 +133,6 @@ img{display:block;max-width:100%}
         <div style="margin-top:12px;border-top:1px solid #e6e1d8;padding-top:22px;display:flex;flex-direction:column;gap:14px">
           <div style="font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#6b7772">In partnership with</div>
           <div style="display:flex;flex-wrap:wrap;gap:10px 28px;font-family:'Playfair Display',serif;font-size:18px;color:#143f58">
-            <span>UCLA Oncology</span>
             <span>Hearst Cancer Resource Center — Dignity Health</span>
             <span>Dignity Infusion Center</span>
           </div>
@@ -155,7 +165,7 @@ img{display:block;max-width:100%}
         <div style="font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#ffe3ef">Seasonal Blooms</div>
         <h2 style="margin:0;font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(34px,4vw,52px);line-height:1.12">Cancer Victory Garden<br>Flower Subscription</h2>
       </div>
-      <img src="/uploads/1/1/1/8/11186754/pink-green-floral-illustrative-flower-market-flyer_orig.png" alt="Flower subscription flyer" style="width:100%;max-width:760px;height:auto;box-shadow:0 30px 60px -24px rgba(80,10,40,.55)">
+      <a href="/uploads/1/1/1/8/11186754/pink-green-floral-illustrative-flower-market-flyer_orig.png" target="_blank" style="display:block;max-width:760px;margin:0 auto" title="Open full size"><img src="/uploads/1/1/1/8/11186754/pink-green-floral-illustrative-flower-market-flyer_orig.png" alt="Flower subscription flyer" style="width:100%;max-width:760px;height:auto;box-shadow:0 30px 60px -24px rgba(80,10,40,.55)"></a>
     </div>
   </section>
 
@@ -185,7 +195,7 @@ img{display:block;max-width:100%}
 
   <footer style="background:#0f2e40;color:#c7d3d8;padding:80px 28px 36px">
     <div style="max-width:1240px;margin:0 auto;display:flex;flex-direction:column;gap:56px">
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:40px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(clamp(140px,22vw,260px),1fr));gap:40px">
         <div style="display:flex;flex-direction:column;gap:16px">
           <div style="font-family:'Playfair Display',serif;font-size:28px;color:#fff;line-height:1.2">Cancer Victory Garden</div>
           <p style="margin:0;font-size:14px;line-height:1.7;max-width:320px">A San Luis Obispo garden sanctuary that embodies hope and growth.</p>
