@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Save the Dates — Cancer Victory Garden</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:Montserrat,sans-serif;color:#24302c;background:#faf8f4;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#1b597c}a:hover{color:#d9558f}
+img{max-width:100%;height:auto}
+.site-header{background:#faf8f4;border-bottom:1px solid #e6e1d8;position:sticky;top:0;z-index:20}
+.site-header .in{max-width:1240px;margin:0 auto;padding:16px 28px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px}
+.site-header img{height:58px;width:auto;display:block}
+.site-nav{display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+.site-nav a{color:#4a5752;text-decoration:none}.site-nav a:hover{color:#143f58}
+.site-nav a.on{color:#143f58;border-bottom:1px solid #d9558f;padding-bottom:3px}
+.site-nav a.donate{color:#fff;background:#d9558f;padding:12px 22px;border-radius:2px}.site-nav a.donate:hover{background:#c2457d;color:#fff}
+.post{max-width:860px;margin:0 auto;padding:64px 24px 80px}
+.post-date{margin:0 0 12px;font-size:13px;font-weight:600;letter-spacing:.08em;color:#d9558f}
+.post-title{margin:0 0 36px;font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(32px,4.6vw,52px);line-height:1.1;color:#143f58}
+.post-body{font-size:16px;line-height:1.75;color:#33403b}
+.post-body h1,.post-body h2,.post-body .wsite-content-title{font-family:'Playfair Display',serif;font-weight:400;color:#143f58;line-height:1.2}
+.post-body h2,.post-body .wsite-content-title{font-size:28px;margin:36px 0 12px}
+.post-body .paragraph{margin:0 0 18px}
+.post-body table{max-width:100%}
+.post-body .imageGallery{overflow:hidden;margin:8px -5px 20px}
+.post-body .imageGallery:after,.post-body .wsite-multicol:after{content:"";display:block;clear:both}
+.post-body .galleryImage{height:auto}
+.post-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin:16px 0 24px}
+.post-grid img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+/* June 2026 custom newsletter */
+.cvg{background:#fff;border:1px solid #e6e1d8}
+.cvg-header{background:#0f2e40;color:#fff;text-align:center;padding:44px 24px}
+.cvg-header h1{color:#fff;margin:8px 0;font-size:36px}
+.cvg-header p{color:#f7a9c9;margin:0;font-style:italic}
+.cvg-body{padding:12px 28px 28px}
+.cvg-section{padding:24px 0;border-bottom:1px solid #eee8de}
+.cvg-section:last-child{border-bottom:0}
+.cvg-eyebrow{font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#d9558f}
+.cvg-section h2{margin:8px 0 14px}
+.cvg-card{background:#fdf1f6;border-left:3px solid #d9558f;padding:16px 18px;margin:18px 0}
+.cvg-sub-box,.cvg-fiesta{background:#f4f1ea;padding:22px;margin:18px 0;text-align:center}
+.cvg-sub-box .price{font-family:'Playfair Display',serif;font-size:44px;color:#143f58;line-height:1}
+.cvg-sub-box .price-sub{font-size:13px;letter-spacing:.06em;color:#6b7772;margin:6px 0 10px}
+.badge{display:inline-block;background:#d9558f;color:#fff;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:2px}
+.post-back{margin:48px 0 0;font-weight:600}
+.site-footer{background:#0f2e40;color:#c7d3d8;padding:56px 28px 36px}
+.site-footer .in{max-width:1240px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:20px;font-size:13px}
+.site-footer .name{font-family:'Playfair Display',serif;font-size:24px;color:#fff}
+.site-footer nav{display:flex;flex-wrap:wrap;gap:10px 22px}
+.site-footer a{color:#e9eef0;text-decoration:none}.site-footer a:hover{color:#f7a9c9}
+@media (max-width:600px){.post{padding:40px 16px 64px}.cvg-body{padding:8px 16px 20px}.post-body [style*="width:33.28%"]{width:50%!important}}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="in">
+  <a href="/index.html"><img src="/uploads/1/1/1/8/11186754/published/cvg-logo.png?1694798664" alt="Cancer Victory Garden"></a>
+  <nav class="site-nav">
+    <a href="/index.html">Home</a>
+    <a href="/signature-events.html">Signature Events</a>
+    <a href="/garden-champions.html">Garden Champions</a>
+    <a href="/classes.html">Classes</a>
+    <a href="/about.html">About</a>
+    <a href="/donors.html">Donors</a>
+    <a href="/newsletters.html" class="on">Newsletters</a>
+    <a href="https://donate.stripe.com/fZe9BIeix06o8QU4gg" target="_blank" class="donate">Donate</a>
+  </nav>
+</div></header>
+<article class="post">
+<p class="post-date">2/4/2025</p>
+<h1 class="post-title">Save the Dates</h1>
+<div class="post-body">
+
+<div class="paragraph"><span><span style="color:rgb(59, 63, 68)">Hello Flower Friends, </span></span><br/><strong><span><span style="color:rgb(59, 63, 68)"> </span><span style="color:rgb(59, 63, 68)">SAVE THE DATES:</span></span></strong><ul><li><span><span>ANNUAL PLANTING PARTY:  Saturday, March , 2025</span></span></li><li><span><span>ANNUAL SIGNATURE EVENT: Sunday, August 10, 2025</span></span></li></ul> <span><span style="color:rgb(59, 63, 68)">It’s hard to believe that the growing season is over for this year and we are beginning to think about future events in the garden! The end of the season always brings a flurry of behind-the-scenes activity at the Cancer VIctory Garden as we prepare for frost and then start digging tubers. Lots of you have already had your first frost… or maybe it’s right around the corner. After </span><a href="https://7h332.r.a.d.sendibm1.com/mk/cl/f/sh/1t6Af4OiGsEagEDuIMgqwBksq5uGpA/N-Q9kwf9Wd8Z"><span style="color:rgb(204, 86, 103); font-weight:400">digging</span></a><span style="color:rgb(59, 63, 68)">, </span><a href="https://7h332.r.a.d.sendibm1.com/mk/cl/f/sh/1t6Af4OiGsF30wQKgimm6RoiDut0XE/A1awDcxwnKq1"><span style="color:rgb(204, 86, 103); font-weight:400">(maybe) dividing</span></a><span style="color:rgb(59, 63, 68)">, and </span><a href="https://7h332.r.a.d.sendibm1.com/mk/cl/f/sh/1t6Af4OiGsFVLecl54shGhsXbjrkFI/DZA-m3YOSOx-"><span style="color:rgb(204, 86, 103); font-weight:400">storing</span></a><span style="color:rgb(59, 63, 68)"> your dahlia tubers, it’ll be time to put your garden to bed for the winter.</span></span></div> <div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center"> <a> <img alt="Picture" loading="lazy" src="/uploads/1/1/1/8/11186754/2_orig.png" style="width:auto;max-width:100%"/> </a> <div style="display:block;font-size:90%"></div> </div></div> <div class="paragraph">Each morning this January, I've watched the same scene unfold out my office window: frost coating the ground at dawn, thermometer reading steady at 36 degrees. But by mid-morning, the sun breaks through, warming the earth to above 70 degrees and giving us a few precious hours to work. This rhythmic dance is a bit confusing for the plants between almost freezing and warming has shaped our workdays in unexpected ways. We have been digging up all the Dahlia tubers and splitting them. We will be having a Tuber Sale at our <span style="font-weight:700">March 8, Saturday, 2025</span>, <span style="font-weight:700">Planting Party</span>. Right now I am waiting for it to warm up enough to go outside and divide tubers then place them in plastic containers with vermiculite until the PlantingParty. It seems ages ago that we had our Annual Evening in the Cancer Victory Garden.<br/><span></span></div> <div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center"> <a> <img alt="Picture" loading="lazy" src="/uploads/1/1/1/8/11186754/3-1_orig.png" style="width:auto;max-width:100%"/> </a> <div style="display:block;font-size:90%"></div> </div></div> <div class="paragraph">Our 2024 Signature Event: An Argentine Evening in the Garden brought out over 60 donors to the CVG. We are so grateful that you deem our project worthy to support. This year we gave over 524 vases of flowers to cancer patients through Dignity Infusion, Hearst Cancer Resource Center, UCLA, and Grace Bible Church. Who knew that a tiny plot of land could yield so much! Thank you for your donations which purchased superior fertilizer to create big and profuse Dahlias and more! We added large containers for even more Dahlias. Which in turn means more water but then you supported this as well. Our team of floral arrangers, supporters and gardeners are wonderful. We are in the garden each Monday during the growing season May - September.​<br/><span></span></div> <div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center"> <a> <img alt="Picture" loading="lazy" src="/uploads/1/1/1/8/11186754/3_orig.png" style="width:auto;max-width:100%"/> </a> <div style="display:block;font-size:90%"></div> </div></div> <div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center"> <a> <img alt="Picture" loading="lazy" src="/uploads/1/1/1/8/11186754/4_orig.png" style="width:auto;max-width:100%"/> </a> <div style="display:block;font-size:90%"></div> </div></div> <div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center"> <a> <img alt="Picture" loading="lazy" src="/uploads/1/1/1/8/11186754/5_orig.png" style="width:auto;max-width:100%"/> </a> <div style="display:block;font-size:90%"></div> </div></div> <div class="paragraph">For now <span style="font-weight:700">MARK YOUR CALENDAR for March 8, Saturday, 9-12</span> and we will plant a TON of Dahlias and seeds. Everyone is welcome to dig in the dirt: Survivors, Supporters, Patients, and even your grandchildren! With your donation of $20 lunch is included! Yum! More to come!​<br/><span></span></div> <div><div class="wsite-image wsite-image-border-none" style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center"> <a> <img alt="Picture" loading="lazy" src="/uploads/1/1/1/8/11186754/6_orig.jpeg" style="width:auto;max-width:100%"/> </a> <div style="display:block;font-size:90%"></div> </div></div> <div class="paragraph">​If you feel like dividing Dahlias, come on by!!<br/><span></span>Happy gardening!<br/><span></span>Love, Linda<br/><span></span></div>
+
+</div>
+<p class="post-back"><a href="/newsletters.html">&larr; All newsletters</a></p>
+</article>
+<footer class="site-footer"><div class="in">
+  <div class="name">Cancer Victory Garden</div>
+  <nav>
+    <a href="/index.html">Home</a>
+    <a href="/signature-events.html">Signature Events</a>
+    <a href="/garden-champions.html">Garden Champions</a>
+    <a href="/classes.html">Classes</a>
+    <a href="/about.html">About</a>
+    <a href="/donors.html">Donors</a>
+  </nav>
+  <span style="color:#9fb1b9">Made with ♥ Cancer Victory Garden</span>
+</div></footer>
+</body>
+</html>

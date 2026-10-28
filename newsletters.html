@@ -44,7 +44,7 @@ img{display:block;max-width:100%}
   </section>
 
   <section data-screen-label="02 Featured" style="padding:100px 28px 60px;background:#faf8f4">
-    <a href="https://www.cancervictorygarden.com/newsletters/cancer-victory-garden-newsletterjune-2026" target="_blank" style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:0;background:#fff;border:1px solid #e6e1d8;text-decoration:none;color:inherit">
+    <a href="/newsletters/cancer-victory-garden-newsletterjune-2026.html" style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:0;background:#fff;border:1px solid #e6e1d8;text-decoration:none;color:inherit">
       <div style="min-height:380px;background:#e6e1d8 url('/uploads/1/1/1/8/11186754/plant-party-4-18-26-13.jpg') center/cover no-repeat"></div>
       <div style="padding:52px 48px;display:flex;flex-direction:column;gap:18px;justify-content:center">
         <div style="display:flex;gap:14px;align-items:center;font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase"><span style="color:#d9558f">Latest</span><span style="color:#6b7772">June 19, 2026</span></div>
@@ -59,7 +59,7 @@ img{display:block;max-width:100%}
     <div style="max-width:1240px;margin:0 auto;display:flex;flex-direction:column">
       <div style="font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#6b7772;padding-bottom:20px">Archive</div>
       <sc-for list="{{ posts }}" as="p" hint-placeholder-count="6">
-        <a href="{{ p.url }}" target="_blank" style="display:grid;grid-template-columns:minmax(120px,180px) minmax(0,1fr) auto;gap:24px 40px;align-items:baseline;padding:32px 0;border-top:1px solid #d8d2c6;text-decoration:none;color:inherit" style-hover="background:#f4f1ea">
+        <a href="{{ p.url }}" style="display:grid;grid-template-columns:minmax(120px,180px) minmax(0,1fr) auto;gap:24px 40px;align-items:baseline;padding:32px 0;border-top:1px solid #d8d2c6;text-decoration:none;color:inherit" style-hover="background:#f4f1ea">
           <div style="font-size:13px;font-weight:600;letter-spacing:.08em;color:#d9558f">{{ p.date }}</div>
           <div style="display:flex;flex-direction:column;gap:10px">
             <h3 style="margin:0;font-family:'Playfair Display',serif;font-weight:400;font-size:26px;line-height:1.2;color:#143f58">{{ p.title }}</h3>
@@ -88,15 +88,15 @@ img{display:block;max-width:100%}
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script>
-const N = 'https://www.cancervictorygarden.com/newsletters/';
+const N = '/newsletters/';
 const POSTS = [
-  { date: 'April 22, 2026', title: 'Planting Seeds, Building Community: Spring Fundraiser Recap', summary: 'More than 40 volunteers planted the entire garden in a single day on April 18. Opening day set for Monday, May 25, 2026 — and the Summer Fiesta is coming July 19.', url: N + 'planting-seeds-building-community-spring-fundraiser-recap-whats-coming-next' },
-  { date: 'April 13, 2026', title: 'Hello Flower Lovers!', summary: 'The 2025 season produced more than 561 vases of flowers for cancer patients in San Luis Obispo at no charge. Plus tips on storing and maintaining dahlia tubers.', url: N + 'april-13th-2026' },
-  { date: 'September 25, 2025', title: 'An Authentic Mexican Evening in the Garden', summary: 'A recap of our August 10 Signature Event — together we raised over $5,000 — and a welcome to our newest volunteers.', url: N + 'mondays-at-the-cvg8531574' },
-  { date: 'June 10, 2025', title: 'Opening Day & New Floral Arrangers', summary: 'The garden opened May 19, 2025. Monthly classes at Hearst are underway, and we meet the survivors and volunteers who make our arrangements possible.', url: N + 'mondays-at-the-cvg5706675' },
-  { date: 'March 20, 2025', title: 'Annual CVG Planting Party', summary: 'Over 40 people planted the 2025 garden on March 8. Linda shares her secret soil recipe and tips for growing dahlias.', url: N + 'mondays-at-the-cvg3314665' },
-  { date: 'February 4, 2025', title: 'Save the Dates', summary: 'Our 2024 Argentine Evening brought out over 60 donors, and the garden gave over 524 vases to cancer patients. Planning for the season ahead.', url: N + 'mondays-at-the-cvg' },
-  { date: 'October 21, 2024', title: 'Monday at the CVG', summary: 'A look at a typical Monday: cutting dahlias, preparing vases with cards of encouragement, arranging, and delivering 25 arrangements a week.', url: N + 'monday-at-the-cvg-oct-2024' }
+  { date: 'April 22, 2026', title: 'Planting Seeds, Building Community: Spring Fundraiser Recap', summary: 'More than 40 volunteers planted the entire garden in a single day on April 18. Opening day set for Monday, May 25, 2026 — and the Summer Fiesta is coming July 19.', url: N + 'planting-seeds-building-community-spring-fundraiser-recap-whats-coming-next.html' },
+  { date: 'April 13, 2026', title: 'Hello Flower Lovers!', summary: 'The 2025 season produced more than 561 vases of flowers for cancer patients in San Luis Obispo at no charge. Plus tips on storing and maintaining dahlia tubers.', url: N + 'april-13th-2026.html' },
+  { date: 'September 25, 2025', title: 'An Authentic Mexican Evening in the Garden', summary: 'A recap of our August 10 Signature Event — together we raised over $5,000 — and a welcome to our newest volunteers.', url: N + 'mondays-at-the-cvg8531574.html' },
+  { date: 'June 10, 2025', title: 'Opening Day & New Floral Arrangers', summary: 'The garden opened May 19, 2025. Monthly classes at Hearst are underway, and we meet the survivors and volunteers who make our arrangements possible.', url: N + 'mondays-at-the-cvg5706675.html' },
+  { date: 'March 20, 2025', title: 'Annual CVG Planting Party', summary: 'Over 40 people planted the 2025 garden on March 8. Linda shares her secret soil recipe and tips for growing dahlias.', url: N + 'mondays-at-the-cvg3314665.html' },
+  { date: 'February 4, 2025', title: 'Save the Dates', summary: 'Our 2024 Argentine Evening brought out over 60 donors, and the garden gave over 524 vases to cancer patients. Planning for the season ahead.', url: N + 'mondays-at-the-cvg.html' },
+  { date: 'October 21, 2024', title: 'Monday at the CVG', summary: 'A look at a typical Monday: cutting dahlias, preparing vases with cards of encouragement, arranging, and delivering 25 arrangements a week.', url: N + 'monday-at-the-cvg-oct-2024.html' }
 ];
 class Component extends DCLogic {
   renderVals() { return { posts: POSTS }; }
